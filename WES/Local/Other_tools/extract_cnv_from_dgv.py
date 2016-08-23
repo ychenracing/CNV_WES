@@ -9,6 +9,10 @@ import re
 dgv_files_folder = '/Users/racing/Desktop/dgv_known_cnv'
 output_folder = '/Users/racing/Desktop/dgv_cnv'
 
+## windows
+# dgv_files_folder = r'C:\Users\Administrator\Desktop\dgv_known_cnv'
+# output_folder = r'C:\Users\Administrator\Desktop\dgv_cnv'
+
 
 def cnv_compare(cnv_line1, cnv_line2):
     features1 = re.split(r'\s+', cnv_line1)
@@ -57,7 +61,7 @@ def filter_and_sort(file_path):
     if not os.path.exists(output_folder):
         os.mkdir(output_folder)
     file_name = os.path.basename(file_path)
-    output_file_name = 'dbvar_known_cnv_NA' + file_name.replace('csv', 'tsv')
+    output_file_name = 'dgv_known_cnv_NA' + file_name.replace('csv', 'tsv')
     output_file_path = os.path.join(output_folder, output_file_name)
     with open(file_path, 'r+') as fr:
         with open(output_file_path, 'w+') as fw:
