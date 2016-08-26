@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/CNV_WES.iml" filepath="$PROJECT_DIR$/.idea/CNV_WES.iml" />
       <module fileurl="file://$USER_HOME$/PycharmProjects/CNV_WES/.idea/CNV_WES.iml" filepath="$USER_HOME$/PycharmProjects/CNV_WES/.idea/CNV_WES.iml" />
     </modules>
   </component>
