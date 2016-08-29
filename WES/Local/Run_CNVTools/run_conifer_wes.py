@@ -37,19 +37,19 @@ def generate_shell_and_run_every_step():
                 bam_command += ' --output ' + os.path.join(rpkm_folder_path, bam_name[:7] + '.rpkm')
                 fw.write(bam_command + '\n')
     # run rpkm shell
-    os.system('sh ' + os.path.join(current_path, 'wes_conifer_rpkm.sh'))
+    # os.system('sh ' + os.path.join(current_path, 'wes_conifer_rpkm.sh'))
     # run analysis shell
     with open(os.path.join(current_path, 'wes_conifer_analysis.sh'), 'w+') as fw:
         analysis_command = analysis_shell_prefix + probe_file_path + ' --rpkm_dir ' + rpkm_folder_path
         analysis_command += ' --output ' + os.path.join(current_path, 'analysis.hdf5') + '  --svd 3 --write_sd '
         analysis_command += os.path.join(current_path, 'sd_values.txt') + ' --write_svals ' + os.path.join(current_path, 'singular_values.txt')
         fw.write(analysis_command + '\n')
-    os.system('sh ' + os.path.join(current_path, 'wes_conifer_analysis.sh'))
+    # os.system('sh ' + os.path.join(current_path, 'wes_conifer_analysis.sh'))
     # run call shell
     with open(os.path.join(current_path, 'wes_conifer_call.sh'), 'w+') as fw:
         call_command = call_shell_prefix + os.path.join(current_path, 'analysis.hdf5') + ' --output ' + os.path.join(current_path, 'call.txt')
         fw.write(call_command + '\n')
-    os.system('sh ' + os.path.join(current_path, 'wes_conifer_call.sh'))
+    # os.system('sh ' + os.path.join(current_path, 'wes_conifer_call.sh'))
 
 
 if __name__ == '__main__':

@@ -15,15 +15,15 @@ def generate_cnvnator_shell(case_path, output_path):
     sample_name = output_path[-7:]
     with open(os.path.join(output_path[:-7], 'wes_cnvnator.sh'), 'a+') as fw:
         fw.write(cnvnator_path + ' -root ' + os.path.join(output_path, sample_name) +
-                 '.root -chrom 1 4 -tree ' + case_path + '\n')
+                 '.root -chrom 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 X Y -tree ' + case_path + '\n')
         fw.write(cnvnator_path + ' -root ' + os.path.join(output_path, sample_name) +
-                 '.root -chrom 1 4 -d ' + hg19_chr_path + ' -his 100\n')
+                 '.root -chrom 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 X Y -d ' + hg19_chr_path + ' -his 100\n')
         fw.write(cnvnator_path + ' -root ' + os.path.join(output_path, sample_name) +
                  '.root -stat 100\n')
         fw.write(cnvnator_path + ' -root ' + os.path.join(output_path, sample_name) +
                  '.root -partition 100\n')
         fw.write(cnvnator_path + ' -root ' + os.path.join(output_path, sample_name) +
-                 '.root -chrom 1 4 -call 100\n')
+                 '.root -chrom 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 X Y -call 100\n')
 
 
 if __name__ == '__main__':
